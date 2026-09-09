@@ -5,3 +5,24 @@ __pycache__/
 .streamlit/secrets.toml
 *.log
 .DS_Store
+
+# Development backups and temporary files
+app_backup_*
+app_old.py
+*_upgrade.txt
+anomaly_center.txt
+final_layout.py
+final_ui.py
+fix_*.py
+install_*.py
+remove_html_hero.py
+repair_dataset.py
+restore_professional_ui.py
+ui_polish.txt
+ui_theme.txt
+ollama_chat.txt
+ollama_chat_upgrade.txt
+pdf_report_upgrade.txt
+row_investigator.txt
+smart_recommendations.txt
+dashboard_upgrade.txt
