@@ -23,6 +23,145 @@ st.set_page_config(
 
 
 # ============================================================
+# PROFESSIONAL DARK / BLUE UI THEME
+# ============================================================
+
+st.markdown("""
+<style>
+    .stApp {
+        background: radial-gradient(circle at 85% 5%, rgba(76, 82, 190, 0.18), transparent 28%),
+                    linear-gradient(135deg, #070b16 0%, #0b1020 48%, #10152b 100%);
+    }
+
+    [data-testid="stSidebar"] {
+        background: linear-gradient(180deg, #080d1d 0%, #0c1225 100%);
+        border-right: 1px solid rgba(117, 128, 255, 0.20);
+    }
+
+    [data-testid="stSidebar"] .block-container {
+        padding-top: 2rem;
+    }
+
+    .side-brand {
+        padding: 0 0 1.1rem 0;
+    }
+
+    .side-title {
+        font-size: 1.25rem;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+    }
+
+    .side-subtitle {
+        margin-top: 0.35rem;
+        color: #9ba7c7;
+        font-size: 0.82rem;
+        line-height: 1.45;
+    }
+
+    .side-list {
+        display: grid;
+        gap: 0.45rem;
+        color: #cdd5f2;
+        font-size: 0.83rem;
+        line-height: 1.35;
+    }
+
+    .tech-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.35rem;
+    }
+
+    .tech-list span {
+        border: 1px solid rgba(130, 145, 255, 0.24);
+        background: rgba(87, 100, 190, 0.10);
+        border-radius: 999px;
+        padding: 0.25rem 0.5rem;
+        color: #bfc9ee;
+        font-size: 0.72rem;
+    }
+
+    .hero {
+        padding: 2.25rem 2.4rem;
+        margin: 0.5rem 0 1.5rem 0;
+        border-radius: 24px;
+        border: 1px solid rgba(130, 145, 255, 0.24);
+        background: linear-gradient(120deg, rgba(33, 83, 196, 0.95) 0%, rgba(83, 61, 190, 0.96) 52%, rgba(126, 55, 177, 0.94) 100%);
+        box-shadow: 0 22px 60px rgba(22, 35, 110, 0.28);
+    }
+
+    .hero-kicker {
+        color: #d9e5ff;
+        font-size: 0.75rem;
+        font-weight: 800;
+        letter-spacing: 0.14em;
+    }
+
+    .hero-title {
+        margin-top: 0.4rem;
+        color: white;
+        font-size: clamp(2.2rem, 5vw, 4rem);
+        line-height: 1.02;
+        font-weight: 900;
+        letter-spacing: -0.05em;
+    }
+
+    .hero-text {
+        max-width: 760px;
+        margin-top: 0.8rem;
+        color: #e9edff;
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .hero-badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.55rem;
+        margin-top: 1.25rem;
+    }
+
+    .hero-badges span {
+        background: rgba(255,255,255,0.12);
+        border: 1px solid rgba(255,255,255,0.20);
+        border-radius: 999px;
+        padding: 0.35rem 0.7rem;
+        color: white;
+        font-size: 0.78rem;
+        font-weight: 700;
+    }
+
+    [data-testid="stFileUploader"] {
+        border: 1px dashed rgba(113, 143, 255, 0.55);
+        border-radius: 18px;
+        background: linear-gradient(180deg, rgba(37, 45, 83, 0.62), rgba(20, 25, 49, 0.72));
+        padding: 0.65rem;
+    }
+
+    [data-testid="stMetric"] {
+        background: linear-gradient(145deg, rgba(27, 34, 64, 0.92), rgba(15, 20, 40, 0.92));
+        border: 1px solid rgba(113, 127, 210, 0.18);
+        border-radius: 16px;
+        padding: 0.9rem 1rem;
+    }
+
+    .stButton > button, .stDownloadButton > button {
+        border-radius: 10px;
+        border: 1px solid rgba(113, 143, 255, 0.34);
+    }
+
+    h1, h2, h3 {
+        letter-spacing: -0.025em;
+    }
+
+    hr {
+        border-color: rgba(113, 127, 210, 0.16);
+    }
+</style>
+""", unsafe_allow_html=True)
+
+# ============================================================
 # HELPER FUNCTIONS
 # ============================================================
 
@@ -126,174 +265,70 @@ def get_strongest_correlation(dataframe):
 
 
 # ============================================================
-# TITLE
+# PROFESSIONAL UI
 # ============================================================
 
+# Sidebar
+with st.sidebar:
+    st.markdown("""
+    <div class="side-brand">
+        <div class="side-title">🕵️ AI Data Detective</div>
+        <div class="side-subtitle">AI-powered data quality & anomaly investigation</div>
+    </div>
+    """, unsafe_allow_html=True)
 
-st.write(
-    "Upload a dataset and automatically detect "
-    "quality problems, anomalies, patterns, "
-    "and useful insights."
-)
+    st.markdown("### 🚀 Features")
+    st.markdown("""
+    <div class="side-list">
+        <div>📊 Dataset Overview</div>
+        <div>🚨 Missing Value Detection</div>
+        <div>🔁 Duplicate Detection</div>
+        <div>🕵️ IQR Anomaly Detection</div>
+        <div>🤖 ML Anomaly Detection</div>
+        <div>🧠 Smart Data Insights</div>
+        <div>📈 Interactive Visualization</div>
+        <div>🧹 Data Cleaning</div>
+        <div>❤️ Dataset Health Score</div>
+        <div>📄 PDF Data Reports</div>
+        <div>💬 Local AI Chat with Qwen</div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    st.markdown("### 🛠️ Technology")
+    st.markdown("""
+    <div class="tech-list">
+        <span>Streamlit</span>
+        <span>Pandas / NumPy</span>
+        <span>Scikit-learn</span>
+        <span>Plotly</span>
+        <span>Ollama + Qwen 2.5 3B</span>
+        <span>ReportLab</span>
+    </div>
+    """, unsafe_allow_html=True)
+
+    st.markdown("---")
+    st.caption("🎯 Turn Data into Actionable Insights")
+    st.caption("Built as a portfolio / placement project")
+
+# Main hero
+st.markdown("""
+<div class="hero">
+    <div class="hero-kicker">🔎 AI-POWERED DATA ANALYTICS</div>
+    <div class="hero-title">AI Data Detective</div>
+    <div class="hero-text">Upload your dataset and automatically discover data quality issues, anomalies, patterns, and actionable insights.</div>
+    <div class="hero-badges">
+        <span>📊 Analyze</span>
+        <span>🚨 Detect</span>
+        <span>🧠 Explain</span>
+        <span>📄 Report</span>
+    </div>
+</div>
+""", unsafe_allow_html=True)
 
 
 # ============================================================
 # FILE UPLOAD
 # ============================================================
-
-# ============================================================
-# PLACEMENT-READY SIDEBAR
-# ============================================================
-
-with st.sidebar:
-
-    
-
-    st.caption(
-        "AI-powered data quality and anomaly investigation"
-    )
-
-    st.markdown("---")
-
-    st.markdown("### 🚀 Features")
-
-    
-
-
-# =========================================================
-# HERO
-# =========================================================
-
-
-# =========================================================
-# UPLOAD SECTION
-# =========================================================
-
-
-
-# ===== PROFESSIONAL AI DATA DETECTIVE UI =====
-
-# Sidebar
-with st.sidebar:
-    st.markdown("## 🕵️ AI Data Detective")
-    st.markdown(
-        "AI-powered data quality and<br>anomaly investigation",
-        unsafe_allow_html=True
-    )
-
-    st.divider()
-
-    st.markdown("### 🚀 Features")
-    st.markdown("""
-- 📁 CSV / Excel analysis
-- 🧹 Data cleaning
-- 🚨 Anomaly detection
-- 📊 Interactive dashboards
-- 🧠 Smart insights
-- 🤖 Local AI with Qwen
-- 📄 PDF reports
-""")
-
-    st.divider()
-
-    st.markdown("### 🛠️ Technology")
-    st.markdown("""
-**Frontend:** Streamlit
-
-**Data:** Pandas / NumPy
-
-**ML:** Scikit-learn
-
-**Charts:** Plotly
-
-**AI:** Ollama + Qwen 2.5 3B
-
-**Reports:** ReportLab
-""")
-
-    st.markdown("---")
-    st.info("🎯 Turn Data into Actionable Insights")
-
-# Main page styling
-st.markdown("""
-<style>
-.stApp {
-    background: #071638;
-}
-
-[data-testid="stSidebar"] {
-    background: linear-gradient(180deg, #071536 0%, #111d55 55%, #17145a 100%);
-}
-
-[data-testid="stSidebar"] * {
-    color: #f5f7ff !important;
-}
-
-[data-testid="stSidebar"] .stMarkdown {
-    color: #f5f7ff;
-}
-
-.hero {
-    background: linear-gradient(110deg, #0b2f87 0%, #1839c7 48%, #4937e8 100%);
-    border: 1px solid #356dff;
-    border-radius: 24px;
-    padding: 30px 34px;
-    margin-bottom: 22px;
-    box-shadow: 0 15px 40px rgba(25, 65, 190, .35);
-}
-
-.hero-title {
-    font-size: 42px;
-    font-weight: 800;
-    color: white;
-    margin-bottom: 8px;
-}
-
-.hero-subtitle {
-    font-size: 17px;
-    color: #f1f5ff;
-    margin-bottom: 18px;
-}
-
-.hero-badge {
-    display: inline-block;
-    background: rgba(255,255,255,.14);
-    border: 1px solid rgba(255,255,255,.28);
-    border-radius: 22px;
-    padding: 8px 16px;
-    color: white;
-    font-weight: 600;
-}
-
-.upload-card {
-    background: #0c2558;
-    border: 1px solid #285bc5;
-    border-radius: 20px;
-    padding: 22px;
-    margin-bottom: 22px;
-}
-
-.section-title {
-    color: white;
-    font-size: 26px;
-    font-weight: 750;
-    margin: 12px 0;
-}
-</style>
-""", unsafe_allow_html=True)
-
-# Main hero
-st.markdown(
-    '<div class="hero"><div class="hero-title">🕵️ AI Data Detective</div><div class="hero-subtitle">Intelligent Data Analysis • Anomaly Detection • AI-Powered Insights</div><div class="hero-badge">⚡ Powered by Python + Machine Learning + Local AI</div></div>',
-    unsafe_allow_html=True
-)
-
-st.markdown(
-    '<div class="section-title">📁 Upload your dataset</div>',
-    unsafe_allow_html=True
-)
-
-# ===== END PROFESSIONAL UI =====
 
 uploaded_file = st.file_uploader(
     "📂 Upload your dataset",
@@ -1578,284 +1613,6 @@ for item in summary_items:
 
 # ============================================================
 # ============================================================
-# ============================================================
-# INTERACTIVE ROW INVESTIGATOR
-# ============================================================
-
-st.markdown("---")
-st.subheader("🔎 Interactive Row Investigator")
-st.caption(
-    "Select rows from your dataset and investigate them with local AI."
-)
-
-# Display selectable dataframe
-selection = st.dataframe(
-    df,
-    width="stretch",
-    hide_index=True,
-    on_select="rerun",
-    selection_mode="multi-row",
-    key="investigator_table"
-)
-
-selected_rows = selection.selection.rows
-
-if selected_rows:
-
-    st.success(
-        f"✅ {len(selected_rows)} row(s) selected."
-    )
-
-    selected_data = df.iloc[selected_rows]
-
-    st.markdown("### 📌 Selected Records")
-
-    st.dataframe(
-        selected_data,
-        width="stretch",
-        hide_index=True
-    )
-
-    selected_csv = selected_data.to_csv(index=False)
-
-    st.download_button(
-        "📥 Download Selected Rows",
-        data=selected_csv,
-        file_name="selected_rows.csv",
-        mime="text/csv",
-        width="content"
-    )
-
-    st.markdown("### 🤖 AI Investigation")
-
-    investigation_question = st.text_input(
-        "What would you like to know about the selected rows?",
-        placeholder="Example: What is unusual about these records?"
-    )
-
-    if investigation_question:
-
-        import requests
-
-        try:
-
-            selected_text = selected_data.to_string(
-                index=False
-            )
-
-            prompt = f"""
-You are an AI Data Detective.
-
-Analyze ONLY the selected records below.
-
-Selected records:
-{selected_text}
-
-User question:
-{investigation_question}
-
-Rules:
-- Do not invent values.
-- Use only the selected records.
-- Point out important patterns or unusual values.
-- Give a concise explanation.
-"""
-
-            with st.spinner(
-                "🤖 Qwen is investigating the selected records..."
-            ):
-
-                response = requests.post(
-                    "http://localhost:11434/api/chat",
-                    json={
-                        "model": "qwen2.5:3b",
-                        "messages": [
-                            {
-                                "role": "user",
-                                "content": prompt
-                            }
-                        ],
-                        "stream": False
-                    },
-                    timeout=120
-                )
-
-                response.raise_for_status()
-
-                result = response.json()
-
-                answer = result["message"]["content"]
-
-            st.markdown("### 🧠 Investigation Result")
-
-            st.write(answer)
-
-        except requests.exceptions.ConnectionError:
-
-            st.error(
-                "❌ Ollama is not running. "
-                "Open another PowerShell window and run: ollama serve"
-            )
-
-        except requests.exceptions.Timeout:
-
-            st.error(
-                "❌ The local AI took too long to respond."
-            )
-
-        except Exception as e:
-
-            st.error(
-                f"❌ Investigation error: {e}"
-            )
-
-else:
-
-    st.info(
-        "👆 Select one or more rows above to investigate them."
-    )
-
-# ============================================================
-# ANOMALY INVESTIGATION CENTER
-# ============================================================
-
-st.markdown("---")
-st.subheader("🚨 Anomaly Investigation Center")
-st.caption("Find and investigate unusual numeric records.")
-
-anomaly_records = []
-
-numeric_cols_anomaly = df.select_dtypes(
-    include=np.number
-).columns.tolist()
-
-for col in numeric_cols_anomaly:
-
-    series = df[col]
-
-    clean_series = series.dropna()
-
-    if len(clean_series) < 4:
-        continue
-
-    q1 = clean_series.quantile(0.25)
-    q3 = clean_series.quantile(0.75)
-    iqr = q3 - q1
-
-    if iqr == 0:
-        continue
-
-    lower_bound = q1 - 1.5 * iqr
-    upper_bound = q3 + 1.5 * iqr
-
-    mask = (
-        (series < lower_bound) |
-        (series > upper_bound)
-    )
-
-    suspicious_indexes = df.index[mask.fillna(False)]
-
-    for index in suspicious_indexes:
-
-        value = df.loc[index, col]
-
-        if value < lower_bound:
-            reason = "Below lower IQR boundary"
-        else:
-            reason = "Above upper IQR boundary"
-
-        anomaly_records.append({
-            "Row": int(index),
-            "Column": str(col),
-            "Value": value,
-            "Lower Bound": round(lower_bound, 2),
-            "Upper Bound": round(upper_bound, 2),
-            "Reason": reason
-        })
-
-if anomaly_records:
-
-    anomaly_df = pd.DataFrame(anomaly_records)
-
-    st.warning(
-        f"🔎 {len(anomaly_df)} suspicious value(s) found."
-    )
-
-    st.dataframe(
-        anomaly_df,
-        width="stretch",
-        hide_index=True
-    )
-
-    st.markdown("### 🔍 Investigate an Anomaly")
-
-    selected_anomaly = st.selectbox(
-        "Choose an anomaly to investigate",
-        range(len(anomaly_df)),
-        format_func=lambda x: (
-            f"Row {anomaly_df.iloc[x]['Row']} — "
-            f"{anomaly_df.iloc[x]['Column']} = "
-            f"{anomaly_df.iloc[x]['Value']}"
-        )
-    )
-
-    selected_anomaly_info = anomaly_df.iloc[
-        selected_anomaly
-    ]
-
-    row_number = int(selected_anomaly_info["Row"])
-
-    original_row = df.loc[[row_number]]
-
-    st.markdown("#### 📌 Original Record")
-
-    st.dataframe(
-        original_row,
-        width="stretch",
-        hide_index=True
-    )
-
-    st.markdown("#### 🧠 Why is this suspicious?")
-
-    selected_column = selected_anomaly_info["Column"]
-    selected_value = selected_anomaly_info["Value"]
-    lower = selected_anomaly_info["Lower Bound"]
-    upper = selected_anomaly_info["Upper Bound"]
-
-    if selected_value < lower:
-
-        explanation = (
-            f"The value **{selected_value}** in "
-            f"**{selected_column}** is below the "
-            f"lower IQR boundary of **{lower}**."
-        )
-
-    else:
-
-        explanation = (
-            f"The value **{selected_value}** in "
-            f"**{selected_column}** is above the "
-            f"upper IQR boundary of **{upper}**."
-        )
-
-    st.info(explanation)
-
-    anomaly_csv = anomaly_df.to_csv(index=False)
-
-    st.download_button(
-        "📥 Download Anomaly Report",
-        data=anomaly_csv,
-        file_name="anomaly_investigation.csv",
-        mime="text/csv",
-        width="content"
-    )
-
-else:
-
-    st.success(
-        "✅ No IQR-based anomalies were detected."
-    )
-
 # SMART AI RECOMMENDATIONS
 # ============================================================
 
@@ -2587,37 +2344,36 @@ if question:
         "content": question
     })
 
-    try:
 
-        # ----------------------------------------------------
-        # DATASET CONTEXT
-        # ----------------------------------------------------
+    # ----------------------------------------------------
+    # DATASET CONTEXT
+    # ----------------------------------------------------
 
-        if len(df) <= 300:
-            data_for_ai = df.to_string(index=False)
-        else:
-            data_for_ai = df.head(100).to_string(index=False)
+    if len(df) <= 300:
+        data_for_ai = df.to_string(index=False)
+    else:
+        data_for_ai = df.head(100).to_string(index=False)
 
-        numeric_cols = df.select_dtypes(
-            include=np.number
-        ).columns.tolist()
+    numeric_cols = df.select_dtypes(
+        include=np.number
+    ).columns.tolist()
 
-        if numeric_cols:
-            stats_text = df[numeric_cols].describe(
-                include="all"
-            ).round(2).to_string()
-        else:
-            stats_text = "No numeric columns."
+    if numeric_cols:
+        stats_text = df[numeric_cols].describe(
+            include="all"
+        ).round(2).to_string()
+    else:
+        stats_text = "No numeric columns."
 
-        missing_values = df.isnull().sum()
-        missing_text = missing_values[
-            missing_values > 0
-        ].to_string()
+    missing_values = df.isnull().sum()
+    missing_text = missing_values[
+        missing_values > 0
+    ].to_string()
 
-        if not missing_text:
-            missing_text = "No missing values."
+    if not missing_text:
+        missing_text = "No missing values."
 
-        dataset_context = f"""
+    dataset_context = f"""
 You are the AI Data Detective assistant.
 
 You analyze the user's uploaded dataset.
@@ -2648,32 +2404,34 @@ Dataset:
 {data_for_ai}
 """
 
-        # ----------------------------------------------------
-        # RECENT CONVERSATION
-        # ----------------------------------------------------
+    # ----------------------------------------------------
+    # RECENT CONVERSATION
+    # ----------------------------------------------------
 
-        recent_history = st.session_state.ai_chat_history[-10:]
+    recent_history = st.session_state.ai_chat_history[-10:]
 
-        messages = [
-            {
-                "role": "system",
-                "content": dataset_context
-            }
-        ]
+    messages = [
+        {
+            "role": "system",
+            "content": dataset_context
+        }
+    ]
 
-        for message in recent_history:
-            messages.append({
-                "role": message["role"],
-                "content": message["content"]
-            })
+    for message in recent_history:
+        messages.append({
+            "role": message["role"],
+            "content": message["content"]
+        })
 
-        # ----------------------------------------------------
-        # LOCAL AI
-        # ----------------------------------------------------
+    # ----------------------------------------------------
+    # LOCAL AI
+    # ----------------------------------------------------
 
-        with st.chat_message("assistant"):
+    with st.chat_message("assistant"):
 
-            with st.spinner("🤖 AI is analyzing your dataset..."):
+        with st.spinner("🤖 AI is analyzing your dataset..."):
+
+            try:
 
                 response = requests.post(
                     OLLAMA_URL,
@@ -2693,26 +2451,278 @@ Dataset:
 
                 st.write(answer)
 
-        # Save AI response
+            except requests.exceptions.ConnectionError:
+
+                # ------------------------------------------------
+                # CLOUD-SAFE FALLBACK
+                # ------------------------------------------------
+                # Ollama is available locally but not on Streamlit
+                # Cloud. Use direct dataframe analysis instead.
+        
+                question_lower = question.lower()
+
+                numeric_columns = df.select_dtypes(
+                    include=np.number
+                ).columns.tolist()
+
+                if "row" in question_lower:
+                    answer = f"📊 Your dataset contains **{len(df)} rows**."
+
+                elif "column" in question_lower:
+                    answer = (
+                        f"📊 Your dataset contains **{len(df.columns)} columns**.\n\n"
+                        f"Columns: {', '.join(map(str, df.columns))}"
+                    )
+
+                elif "missing" in question_lower:
+                    missing_count = int(df.isna().sum().sum())
+
+                    if missing_count == 0:
+                        answer = "✅ There are **no missing values** in the dataset."
+                    else:
+                        missing_details = df.isna().sum()
+                        missing_details = missing_details[
+                            missing_details > 0
+                        ]
+
+                        details = ", ".join(
+                            f"{col}: {int(count)}"
+                            for col, count in missing_details.items()
+                        )
+
+                        answer = (
+                            f"⚠️ The dataset contains **{missing_count} "
+                            f"missing values**.\n\n"
+                            f"Details: {details}"
+                        )
+
+                elif "duplicate" in question_lower:
+                    duplicate_count = int(df.duplicated().sum())
+
+                    if duplicate_count == 0:
+                        answer = "✅ No duplicate rows were detected."
+                    else:
+                        answer = (
+                            f"⚠️ The dataset contains "
+                            f"**{duplicate_count} duplicate row(s)**."
+                        )
+
+                elif (
+                    "average" in question_lower
+                    or "mean" in question_lower
+                ):
+
+                    selected_column = None
+
+                    for column in numeric_columns:
+                        if str(column).lower() in question_lower:
+                            selected_column = column
+                            break
+
+                    if selected_column is not None:
+
+                        value = df[selected_column].mean()
+
+                        answer = (
+                            f"📈 The average **{selected_column}** is "
+                            f"**{value:.2f}**."
+                        )
+
+                    elif numeric_columns:
+
+                        values = df[numeric_columns].mean()
+
+                        answer = "📈 Average values:\n\n"
+
+                        for column, value in values.items():
+                            answer += f"- **{column}:** {value:.2f}\n"
+
+                    else:
+                        answer = "There are no numeric columns to calculate an average."
+
+                elif (
+                    "highest" in question_lower
+                    or "maximum" in question_lower
+                    or "max" in question_lower
+                ):
+
+                    selected_column = None
+
+                    for column in numeric_columns:
+                        if str(column).lower() in question_lower:
+                            selected_column = column
+                            break
+
+                    if selected_column is None and numeric_columns:
+                        selected_column = numeric_columns[0]
+
+                    if selected_column is not None:
+
+                        value = df[selected_column].max()
+
+                        answer = (
+                            f"🔝 The highest **{selected_column}** is "
+                            f"**{value}**."
+                        )
+
+                    else:
+                        answer = "There are no numeric columns to analyze."
+
+                elif (
+                    "lowest" in question_lower
+                    or "minimum" in question_lower
+                    or "min" in question_lower
+                ):
+
+                    selected_column = None
+
+                    for column in numeric_columns:
+                        if str(column).lower() in question_lower:
+                            selected_column = column
+                            break
+
+                    if selected_column is None and numeric_columns:
+                        selected_column = numeric_columns[0]
+
+                    if selected_column is not None:
+
+                        value = df[selected_column].min()
+
+                        answer = (
+                            f"🔽 The lowest **{selected_column}** is "
+                            f"**{value}**."
+                        )
+
+                    else:
+                        answer = "There are no numeric columns to analyze."
+
+                elif "anomal" in question_lower:
+
+                    anomaly_columns = []
+
+                    for column in numeric_columns:
+
+                        q1 = df[column].quantile(0.25)
+                        q3 = df[column].quantile(0.75)
+
+                        iqr = q3 - q1
+
+                        lower = q1 - 1.5 * iqr
+                        upper = q3 + 1.5 * iqr
+
+                        count = int(
+                            (
+                                (df[column] < lower)
+                                | (df[column] > upper)
+                            ).sum()
+                        )
+
+                        if count > 0:
+                            anomaly_columns.append(
+                                f"**{column}:** {count} unusual value(s)"
+                            )
+
+                    if anomaly_columns:
+
+                        answer = (
+                            "🚨 Potential anomalies were detected:\n\n"
+                            + "\n".join(
+                                f"- {item}"
+                                for item in anomaly_columns
+                            )
+                        )
+
+                    else:
+                        answer = "✅ No obvious IQR anomalies were detected."
+
+                elif "health" in question_lower:
+
+                    missing_count = int(df.isna().sum().sum())
+                    duplicate_count = int(df.duplicated().sum())
+
+                    anomaly_count = 0
+
+                    for column in numeric_columns:
+
+                        q1 = df[column].quantile(0.25)
+                        q3 = df[column].quantile(0.75)
+                        iqr = q3 - q1
+
+                        lower = q1 - 1.5 * iqr
+                        upper = q3 + 1.5 * iqr
+
+                        anomaly_count += int(
+                            (
+                                (df[column] < lower)
+                                | (df[column] > upper)
+                            ).sum()
+                        )
+
+                    health_score = 100
+
+                    if len(df) > 0:
+                        health_score -= int(
+                            (missing_count / (len(df) * len(df.columns))) * 40
+                        )
+
+                        health_score -= int(
+                            (duplicate_count / len(df)) * 20
+                        )
+
+                        health_score -= min(
+                            30,
+                            anomaly_count * 10
+                        )
+
+                    health_score = max(0, min(100, health_score))
+
+                    answer = (
+                        f"💚 Dataset Health Score: **{health_score}/100**\n\n"
+                        f"- Missing values: **{missing_count}**\n"
+                        f"- Duplicate rows: **{duplicate_count}**\n"
+                        f"- Potential anomalies: **{anomaly_count}**"
+                    )
+
+                else:
+
+                    answer = (
+                        "☁️ The local Qwen AI is not available on the "
+                        "deployed cloud version.\n\n"
+                        "However, I can still analyze your dataset directly. "
+                        "Try questions such as:\n\n"
+                        "- How many rows?\n"
+                        "- What is the average marks?\n"
+                        "- Who has the highest marks?\n"
+                        "- What is the lowest age?\n"
+                        "- Are there any missing values?\n"
+                        "- Are there any anomalies?\n"
+                        "- What is the dataset health?"
+                    )
+
+                st.write(answer)
+
+            except requests.exceptions.Timeout:
+
+                answer = (
+                    "⏱️ The local AI took too long to respond. "
+                    "Please try again."
+                )
+
+                st.write(answer)
+
+            except Exception as e:
+
+                answer = (
+                    "⚠️ AI analysis could not be completed.\n\n"
+                    "Please try a dataset question such as "
+                    "'What is the average marks?'"
+                )
+
+                st.write(answer)
+
+    # Save AI response only after a question was processed
+    if question and "answer" in locals():
         st.session_state.ai_chat_history.append({
             "role": "assistant",
             "content": answer
         })
-
-    except requests.exceptions.ConnectionError:
-
-        st.error(
-            "❌ Ollama is not running. "
-            "Open another PowerShell window and run: ollama serve"
-        )
-
-    except requests.exceptions.Timeout:
-
-        st.error(
-            "❌ The local AI took too long to respond. "
-            "Please try again."
-        )
-
-    except Exception as e:
-
-        st.error(f"❌ Local AI error: {e}")
